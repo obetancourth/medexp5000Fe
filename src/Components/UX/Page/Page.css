@@ -1,0 +1,22 @@
+.page_container{
+  margin:0;
+  padding:0;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.page_container main{
+  min-height: calc(100vh - 8rem);
+}
+
+.page_container.no_header main, .page_container.no_footer main{
+  min-height: calc(100vh - 4rem);
+}
+.page_container.no_header.no_footer main{
+  min-height: 100vh;
+}
+.page_header, .page_footer{
+  background-color: #000;
+  color:#fff;
+  height:4rem;
+}
