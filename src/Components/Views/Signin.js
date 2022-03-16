@@ -1,7 +1,15 @@
 import Page from "../UX/Page/Page";
 import Input from "../UX/Forms/Input";
 import { PrimaryButton, SecondaryButton } from "../UX/Forms/Button";
-const SignIn = ({txtCorreoValue, txtPasswordValue, onChange: onChangeHandler, errorTxtCorreo, errorPassword })=> {
+const SignIn = ({
+  txtCorreoValue,
+  txtPasswordValue,
+  onChange: onChangeHandler,
+  errorTxtCorreo,
+  errorPassword,
+  onConfirmClick,
+  onCancelClick
+})=> {
   return (
     <Page header={(<h2>&nbsp;Crear Cuenta</h2>)}>
       <section>
@@ -24,10 +32,10 @@ const SignIn = ({txtCorreoValue, txtPasswordValue, onChange: onChangeHandler, er
           error={errorPassword}
           onChange={onChangeHandler}
         />
-        <PrimaryButton onClick={()=>{alert('Clicked on me')}}>
+        <PrimaryButton onClick={onConfirmClick}>
           Crear Cuenta
         </PrimaryButton>
-        <SecondaryButton>
+        <SecondaryButton onClick={onCancelClick}>
           Tengo Cuenta
         </SecondaryButton>
       </section>
