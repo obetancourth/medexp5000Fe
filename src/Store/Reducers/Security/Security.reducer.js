@@ -1,9 +1,11 @@
+import { setJWT } from '../../../Lib/apiClient';
 const defaultSecurity = {
   email: '',
   jwtToken: '',
   roles: [],
   _id: '',
-  errors: []
+  errors: [],
+  isLoading: false
 }
 
 export const securityReducer = (state = defaultSecurity, action) => {
@@ -16,11 +18,12 @@ export const securityReducer = (state = defaultSecurity, action) => {
     case 'ON_SIGN_IN_ERROR':
       break;
     case 'ON_LOGIN_LOADING':
-      break;
+      return {...state, isLoading:true, errors:[]};
     case 'ON_LOGIN_SUCCESS':
-      break;
+      setJWT(payload.jwtToken);
+      return {...state, ...payload, isLoading:false, errors:[]};
     case 'ON_LOGIN_ERROR':
-      break;
+      return {...state, errors: payload.errors, isLoading:false};
     default:
       return state;
   }

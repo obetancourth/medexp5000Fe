@@ -1,6 +1,6 @@
 import Signin from './Signin';
 import { useState } from 'react';
-import { publicAxios } from '../../Lib/apiClient';
+import { publicAxios } from '../../../Lib/apiClient';
 
 const SigninPage = ()=>{
   const [txtCorreo, setTxtCorreo] = useState('');
