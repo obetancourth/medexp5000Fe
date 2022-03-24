@@ -1,6 +1,7 @@
 import Page from "../../UX/Page/Page";
 import Input from "../../UX/Forms/Input";
 import { PrimaryButton, SecondaryButton } from "../../UX/Forms/Button";
+import Nav from "../../UX/Nav/Nav";
 const Login = ({
   txtCorreoValue,
   txtPasswordValue,
@@ -11,7 +12,7 @@ const Login = ({
   onCancelClick
 }) => {
   return (
-    <Page header={(<h2>&nbsp;Iniciar Sesión</h2>)}>
+    <Page header={(<h2>&nbsp;Iniciar Sesión</h2>)} footer={<Nav/>}>
       <section>
         <Input
           label="Correo Electrónico"

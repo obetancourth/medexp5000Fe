@@ -1,0 +1,34 @@
+.page_footer nav {
+  width:100%;
+  margin:0;
+  padding:0;
+}
+.page_footer nav ul {
+  width:100%;
+  padding:0;
+  margin:0;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.page_footer nav ul li{
+  display:flex;
+  flex:1;
+  justify-content: center;
+  align-items: center;
+  min-height: 4rem;
+  width:100%;
+}
+.page_footer nav ul li a{
+  width:100%;
+  text-decoration: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-align:center;
+}
+
+.page_footer nav ul li a.active{
+  background-color: #fff;
+  color:#000;
+}
