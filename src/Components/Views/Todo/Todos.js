@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 import Page from '../../UX/Page/Page';
+import Nav from '../../UX/Nav/Nav';
 import Input from '../../UX/Forms/Input';
 import { PrimaryButton } from '../../UX/Forms/Button';
 const Todos = ({
@@ -9,7 +10,7 @@ const Todos = ({
   onToggleDone
 })=>{
   return (
-    <Page header={(<h1>Todo List</h1>)}>
+    <Page header={(<h1>Todo List</h1>)} footer={<Nav />}>
       <TodoAddForm addToDo={onAddTodo}></TodoAddForm>
       <TodoFormList todoFormList={list} toggleTodo={onToggleDone}></TodoFormList>
     </Page>

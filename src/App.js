@@ -10,6 +10,7 @@ import Splash from './Components/Views/Splash';
 import Signin from './Components/Views/Signin/SigninPage';
 import Login from './Components/Views/Login/LoginPage';
 import Todo from './Components/Views/Todo/TodoPage';
+import Pacientes from './Components/Views/Pacientes/PacientesPage';
 
 function App() {
   return (
@@ -21,7 +22,8 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/signin" element={<Signin />} />
 
-            <Route path="/todo" element={<Private><Todo /></Private>} />
+            <Route path="/todos" element={<Private><Todo /></Private>} />
+            <Route path="/pacientes" element={<Private><Pacientes /></Private>} />
           </Routes>
         </BrowserRouter>
       </PersistGate>
